@@ -33,18 +33,14 @@ public class Cube_Related_stuff {
         
         for(int j = 0; j < Scramble.length; j++)
         {
-            buffer.append(Scramble[j]);
+            buffer.append(Scramble[j] + " ");
         }
         
         String Scramble_Algorithm = buffer.toString();
-        Scramble_Algorithm.replaceAll(""," ");
         
         System.out.println(Scramble_Algorithm);
         
         return Scramble_Algorithm;
     }
     
-    public static void main(String[] args) {
-        Scramble_Algorithm();
-    }
 }

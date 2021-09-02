@@ -15,13 +15,14 @@ public class Basic_Timer_Screen extends javax.swing.JFrame {
 
     public Basic_Timer_Screen() {
         initComponents();
+        Scramble_Algorithm.setText(Cube_Related_stuff.Scramble_Algorithm());
     }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Time = new javax.swing.JLabel();
+        timeLabel = new javax.swing.JLabel();
         Scramble_Algorithm = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -34,10 +35,10 @@ public class Basic_Timer_Screen extends javax.swing.JFrame {
             }
         });
 
-        Time.setFont(new java.awt.Font("SansSerif", 0, 36)); // NOI18N
-        Time.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Time.setText("          0 : 00 : 000");
-        Time.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        timeLabel.setFont(new java.awt.Font("SansSerif", 0, 36)); // NOI18N
+        timeLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        timeLabel.setText("0 : 00 : 000");
+        timeLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -46,11 +47,11 @@ public class Basic_Timer_Screen extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(81, 81, 81)
-                        .addComponent(Time, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(107, 107, 107)
-                        .addComponent(Scramble_Algorithm, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(Scramble_Algorithm, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(123, 123, 123)
+                        .addComponent(timeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(96, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -58,9 +59,9 @@ public class Basic_Timer_Screen extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(33, 33, 33)
                 .addComponent(Scramble_Algorithm, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
-                .addComponent(Time, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(153, Short.MAX_VALUE))
+                .addGap(36, 36, 36)
+                .addComponent(timeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(149, Short.MAX_VALUE))
         );
 
         pack();
@@ -78,7 +79,7 @@ public class Basic_Timer_Screen extends javax.swing.JFrame {
                     @Override
                     public void run() {
                         MilliSecondsPassed++;
-                        Time.setText(MinutesPassed + ":" + SecondsPassed + ":" + MilliSecondsPassed);
+                        timeLabel.setText(MinutesPassed + ":" + SecondsPassed + ":" + MilliSecondsPassed);
                         if (MilliSecondsPassed == 1000) {
                             MilliSecondsPassed = 0;
                             SecondsPassed++;
@@ -130,6 +131,6 @@ public class Basic_Timer_Screen extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Scramble_Algorithm;
-    private javax.swing.JLabel Time;
+    private javax.swing.JLabel timeLabel;
     // End of variables declaration//GEN-END:variables
 }

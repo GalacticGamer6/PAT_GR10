@@ -5,6 +5,8 @@
  */
 package UI;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author Neeraavr
@@ -16,6 +18,7 @@ public class PLL_Trainer extends javax.swing.JFrame {
      */
     public PLL_Trainer() {
         initComponents();
+        OLL_H.setIcon(new ImageIcon(""));
     }
 
     /**

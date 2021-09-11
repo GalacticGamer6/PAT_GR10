@@ -37,7 +37,6 @@ public class OLL_Trainer extends javax.swing.JFrame {
      */
     public OLL_Trainer() {
         initComponents();
-                PLL_Buttons();
                 OLL_Buttons();
 
         

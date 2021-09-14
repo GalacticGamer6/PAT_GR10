@@ -14,15 +14,15 @@ import javax.swing.ImageIcon;
  */
 public class OLL_Trainer extends javax.swing.JFrame {
     public static String OLL_algs_path = "data\\OLL";
-    public static String PLL_algs_path = "data\\PLL";
+    
     public void OLL_Buttons(){
-        OLL_AntiSune.setIcon(new ImageIcon("data\\AntiSune.png"));
-        OLL_H.setIcon(new ImageIcon("C:\\Users\\neeraavr\\Downloads\\H.png"));
-        OLL_L.setIcon(new ImageIcon("C:\\Users\\neeraavr\\Downloads\\L.png"));
-        OLL_Pi.setIcon(new ImageIcon("C:\\Users\\neeraavr\\Downloads\\Pi.png"));
-        OLL_Sune.setIcon(new ImageIcon("C:\\Users\\neeraavr\\Downloads\\Sune.png"));
-        OLL_T.setIcon(new ImageIcon("C:\\Users\\neeraavr\\Downloads\\T.png"));
-        OLL_U.setIcon(new ImageIcon("C:\\Users\\neeraavr\\Downloads\\U.png"));        
+        OLL_AntiSune.setIcon(new ImageIcon("data\\OLL\\AntiSune.png"));
+        OLL_H.setIcon(new ImageIcon("data\\OLL\\H.png"));
+        OLL_L.setIcon(new ImageIcon("data\\OLL\\L.png"));
+        OLL_Pi.setIcon(new ImageIcon("data\\OLL\\Pi.png"));
+        OLL_Sune.setIcon(new ImageIcon("data\\OLL\\Sune.png"));
+        OLL_T.setIcon(new ImageIcon("data\\OLL\\T.png"));
+        OLL_U.setIcon(new ImageIcon("data\\OLL\\U.png"));        
     }
     public void PLL_Buttons(){
 //        PLL_UA.setIcon(new ImageIcon("C:\\Users\\neeraavr\\Downloads\\PLL_UA.png"));
@@ -37,7 +37,7 @@ public class OLL_Trainer extends javax.swing.JFrame {
      */
     public OLL_Trainer() {
         initComponents();
-                OLL_Buttons();
+        OLL_Buttons();
 
         
     }
@@ -124,6 +124,10 @@ public class OLL_Trainer extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(OLL_Pi, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(OLL_T, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -131,11 +135,9 @@ public class OLL_Trainer extends javax.swing.JFrame {
                                         .addComponent(OLL_AntiSune, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(109, 109, 109)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(OLL_Sune, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(OLL_Pi, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(OLL_T, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(OLL_Sune, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -157,7 +159,6 @@ public class OLL_Trainer extends javax.swing.JFrame {
                             .addComponent(jLabel4))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Back_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(OLL_Output_Field, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(62, Short.MAX_VALUE))))
@@ -216,13 +217,6 @@ public class OLL_Trainer extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void OLL_AntiSuneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OLL_AntiSuneActionPerformed
-        if(OLL_AntiSune.isEnabled()){
-            String AntiSune_Alg = Alg_trainer_Stuff.AntiSune[(int)(Math.random()*(3-1+1))];
-            System.out.println(AntiSune_Alg);
-        }
-    }//GEN-LAST:event_OLL_AntiSuneActionPerformed
-
     private void Back_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Back_ButtonActionPerformed
         this.dispose();
     }//GEN-LAST:event_Back_ButtonActionPerformed
@@ -231,41 +225,20 @@ public class OLL_Trainer extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Show_Scramble_Check_BoxActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-//    public static void main(String args[]) {
-//        /* Set the Nimbus look and feel */
-//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-//         */
-//        try {
-//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-//                if ("Nimbus".equals(info.getName())) {
-//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-//                    break;
-//                }
-//            }
-//        } catch (ClassNotFoundException ex) {
-//            java.util.logging.Logger.getLogger(OLL_Trainer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (InstantiationException ex) {
-//            java.util.logging.Logger.getLogger(OLL_Trainer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (IllegalAccessException ex) {
-//            java.util.logging.Logger.getLogger(OLL_Trainer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-//            java.util.logging.Logger.getLogger(OLL_Trainer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        }
-//        //</editor-fold>
-//        //</editor-fold>
-//
-//        /* Create and display the form */
-//        java.awt.EventQueue.invokeLater(new Runnable() {
-//            public void run() {
-//                new OLL_Trainer().setVisible(true);
-//            }
-//        });
-//    }
+    private void OLL_AntiSuneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OLL_AntiSuneActionPerformed
+        if(Show_Scramble_Check_Box.isEnabled() == true){
+            if(OLL_AntiSune.isEnabled()){
+                OLL_Output_Field.setText(Alg_trainer_Stuff.AntiSune[(int)(Math.random()*(3-1+1))]);
+            }
+        }
+        else if(Show_Scramble_Check_Box.isEnabled() == false){
+            OLL_Output_Field.setText(" ");
+        }
+    }//GEN-LAST:event_OLL_AntiSuneActionPerformed
+
+    public void show_Scramble(){
+
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Back_Button;

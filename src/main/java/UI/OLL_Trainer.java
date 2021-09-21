@@ -5,7 +5,7 @@
  */
 package UI;
 
-import Backend.Alg_trainer_Stuff;
+import Backend.Algorithms;
 import javax.swing.ImageIcon;
 
 /**
@@ -71,7 +71,7 @@ public class OLL_Trainer extends javax.swing.JFrame {
         Show_Solution_Check_Box = new javax.swing.JCheckBox();
         OLL_Output_Field = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         OLL_AntiSune.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -228,7 +228,6 @@ public class OLL_Trainer extends javax.swing.JFrame {
     private void OLL_AntiSuneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OLL_AntiSuneActionPerformed
         if(Show_Scramble_Check_Box.isEnabled() == true){
             if(OLL_AntiSune.isEnabled()){
-                OLL_Output_Field.setText(Alg_trainer_Stuff.AntiSune[(int)(Math.random()*(3-1+1))]);
             }
         }
         else if(Show_Scramble_Check_Box.isEnabled() == false){

@@ -42,7 +42,7 @@ public class PLL_Trainer extends javax.swing.JFrame {
         jCheckBox2 = new javax.swing.JCheckBox();
         PLL_Output_Field = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel1.setText("PLL TRAINER");

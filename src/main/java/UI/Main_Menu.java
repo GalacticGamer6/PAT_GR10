@@ -105,7 +105,7 @@ public class Main_Menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Timer_Screen_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Timer_Screen_ButtonActionPerformed
-        Timer timer = new Timer();
+        Timer_Screen timer = new Timer_Screen();
         timer.setVisible(true);
     }//GEN-LAST:event_Timer_Screen_ButtonActionPerformed
 

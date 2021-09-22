@@ -1,3 +1,14 @@
+
+
+
+
+
+
+
+
+
+
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -19,7 +30,9 @@ public class Goals extends javax.swing.JFrame {
      * Creates new form Goals
      */
     public Goals() {
+        
         initComponents();
+        
         DefaultListModel goals_Lm = new DefaultListModel();
         String [] goals = goal_Manager.get_Goals();
         ;
@@ -34,10 +47,8 @@ public class Goals extends javax.swing.JFrame {
             completed_Goals_Lm.addElement(completed_Goals[i]);
         }
         completed_List.setModel(completed_Goals_Lm);
-        
-        String name = goals_List.getSelectedValue();
-        System.out.println(name);
-        
+    
+
     }
     
     
@@ -83,6 +94,11 @@ public class Goals extends javax.swing.JFrame {
         jScrollPane2.setViewportView(completed_List);
 
         to_Completed_Button.setText(">>");
+        to_Completed_Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                to_Completed_ButtonActionPerformed(evt);
+            }
+        });
 
         jLabel2.setText("TO DO:");
 
@@ -146,6 +162,11 @@ public class Goals extends javax.swing.JFrame {
     private void Back_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Back_buttonActionPerformed
         this.dispose();
     }//GEN-LAST:event_Back_buttonActionPerformed
+
+    private void to_Completed_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_to_Completed_ButtonActionPerformed
+        String name = goals_List.getSelectedValue();
+        goal_Manager.complete_Goal(name);
+    }//GEN-LAST:event_to_Completed_ButtonActionPerformed
 
     /**
      * @param args the command line arguments

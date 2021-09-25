@@ -27,63 +27,54 @@
               <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="OLL_Pi" alignment="0" min="-2" pref="197" max="-2" attributes="0"/>
-                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                              <Component id="jLabel5" min="-2" pref="18" max="-2" attributes="0"/>
-                              <Component id="OLL_T" min="-2" pref="197" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
+                          <Component id="jLabel2" min="-2" pref="161" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel1" alignment="1" min="-2" pref="300" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="OLL_AntiSune" min="-2" pref="197" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="109" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLabel1" min="-2" pref="300" max="-2" attributes="0"/>
+                                          <Component id="OLL_AntiSune" min="-2" pref="191" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
+                                  <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="OLL_H" min="-2" pref="197" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="jLabel3" min="-2" pref="161" max="-2" attributes="0"/>
-                                  <Component id="OLL_Sune" min="-2" pref="197" max="-2" attributes="0"/>
+                                  <Component id="OLL_Sune" max="32767" attributes="0"/>
+                                  <Component id="jLabel5" min="-2" pref="18" max="-2" attributes="0"/>
+                                  <Component id="OLL_T" pref="197" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="1" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="OLL_L" min="-2" pref="197" max="-2" attributes="0"/>
-                                  <Component id="jLabel6" min="-2" pref="9" max="-2" attributes="0"/>
-                                  <Component id="OLL_U" min="-2" pref="197" max="-2" attributes="0"/>
-                                  <Component id="jLabel7" min="-2" pref="22" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="Show_Solution_Check_Box" min="-2" max="-2" attributes="0"/>
-                                  <Component id="Show_Scramble_Check_Box" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
-                          </Group>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jLabel6" min="-2" pref="9" max="-2" attributes="0"/>
+                          <Component id="jLabel7" min="-2" pref="22" max="-2" attributes="0"/>
+                          <Component id="OLL_L" max="32767" attributes="0"/>
+                          <Component id="OLL_U" pref="197" max="32767" attributes="0"/>
                       </Group>
+                      <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="1" attributes="0">
+                  <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="OLL_H" alignment="0" min="-2" pref="197" max="-2" attributes="0"/>
-                          <Component id="jLabel2" alignment="0" min="-2" pref="161" max="-2" attributes="0"/>
-                          <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="OLL_Pi" min="-2" pref="197" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="OLL_Solution_Field" min="-2" pref="600" max="-2" attributes="0"/>
+                                  <Component id="Back_Button" min="-2" pref="113" max="-2" attributes="0"/>
+                                  <Component id="OLL_Scramble_Field" min="-2" pref="600" max="-2" attributes="0"/>
+                                  <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
                       </Group>
-                      <EmptySpace pref="20" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="Back_Button" alignment="0" min="-2" pref="113" max="-2" attributes="0"/>
-                          <Component id="OLL_Output_Field" alignment="0" min="-2" pref="600" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace pref="62" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="64" max="32767" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -93,23 +84,12 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="jLabel1" min="-2" pref="92" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="OLL_AntiSune" min="-2" pref="183" max="-2" attributes="0"/>
-                          <Component id="OLL_Sune" min="-2" pref="183" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                      <Component id="Show_Scramble_Check_Box" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="Show_Solution_Check_Box" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="OLL_L" min="-2" pref="183" max="-2" attributes="0"/>
-                  </Group>
+              <Component id="jLabel1" min="-2" pref="92" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="OLL_L" max="32767" attributes="0"/>
+                  <Component id="OLL_AntiSune" pref="183" max="32767" attributes="0"/>
+                  <Component id="OLL_Sune" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -120,58 +100,44 @@
                   </Group>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+              <Group type="103" groupAlignment="1" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="OLL_H" min="-2" pref="183" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="OLL_U" min="-2" pref="183" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="OLL_T" max="32767" attributes="0"/>
+                          <Component id="OLL_H" max="32767" attributes="0"/>
+                          <Component id="OLL_U" pref="183" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="OLL_Pi" min="-2" pref="183" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Component id="OLL_T" min="-2" pref="183" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="OLL_Output_Field" min="-2" pref="84" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                      </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="OLL_Pi" min="-2" pref="177" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="-2" pref="217" max="-2" attributes="0"/>
+                      <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                      <Component id="OLL_Scramble_Field" min="-2" pref="50" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="OLL_Solution_Field" min="-2" pref="50" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="Back_Button" min="-2" pref="38" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="321" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JToggleButton" name="OLL_AntiSune">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OLL_AntiSuneActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="OLL_H">
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="OLL_L">
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="OLL_Pi">
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="OLL_Sune">
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="OLL_T">
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="OLL_U">
-    </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -223,20 +189,54 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Back_ButtonActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="Show_Scramble_Check_Box">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Show Scramble"/>
-      </Properties>
+    <Component class="javax.swing.JTextField" name="OLL_Scramble_Field">
+    </Component>
+    <Component class="javax.swing.JButton" name="OLL_AntiSune">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Show_Scramble_Check_BoxActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OLL_AntiSuneActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="Show_Solution_Check_Box">
+    <Component class="javax.swing.JTextField" name="OLL_Solution_Field">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel9">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Show Solution"/>
+        <Property name="text" type="java.lang.String" value="Solution:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="OLL_Output_Field">
+    <Component class="javax.swing.JLabel" name="jLabel10">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Scramble:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="OLL_Sune">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OLL_SuneActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="OLL_L">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OLL_LActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="OLL_T">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OLL_TActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="OLL_H">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OLL_HActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="OLL_U">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OLL_UActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="OLL_Pi">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OLL_PiActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

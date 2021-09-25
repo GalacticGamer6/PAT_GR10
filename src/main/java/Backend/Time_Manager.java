@@ -39,16 +39,22 @@ public class Time_Manager {
         } catch (FileNotFoundException ex) {
             System.out.println("file Not Found");
         }
-                      
+                      return 0;
                   }
 	public static String get_Times() {
+                                String [] times_Arr = new String[get_Num_Times()];
+                                int i = 0;
 		try {
 			Scanner sc = new Scanner(new File(file_Path));
 			String output = "";
 
 			while (sc.hasNextLine()) {
-				output += sc.nextLine() + "\n";
+                                                                times_Arr[i] = sc.nextLine();
+                                                                i++;
 			}
+                                                for(int j = times_Arr.length - 1; j>=0 ; j--){
+                                                    output += times_Arr[j] + "\n";
+                                                }
 			sc.close();
 			return output;
 		} catch (FileNotFoundException ex) {
@@ -57,7 +63,7 @@ public class Time_Manager {
 		}
 	}
         
-	public static void add_Time(int Milliseconds) {
+	public static void add_Time(String Milliseconds) {
 		try {
 			PrintWriter pw = new PrintWriter(new FileWriter(file_Path, true));
 			pw.println(Milliseconds);
@@ -67,28 +73,25 @@ public class Time_Manager {
 		}
 	}
         
-                public static void convert_Time(){
-                    
-                Scanner sc = new Scanner();
-                while(sc.hasNextLine()){
-                    
-                }
+                public static String convert_Time(int milliseconds){
                 int arr_Length = get_Num_Times();
-                int ms = 216823;
-                int minutes = (ms/1000)/60;
+                int minutes = (milliseconds/1000)/60;
                 int mins_to_Remove = minutes * 60000;
-                int seconds =(ms/1000)%60;
+                int seconds =(milliseconds/1000)%60;
                 int seconds_to_remove = seconds * 1000;
                 
-                ms = ms - mins_to_Remove - seconds_to_remove;
+                int ms = milliseconds - mins_to_Remove - seconds_to_remove;
                 
-                String output = minutes + ":" + seconds + ":" + ms;                
+                String output = minutes + ":" + seconds + ":" + ms;
+
+                return output;
                 }
         
               
                 
         public static void main(String[] args) {
-        convert_Time();
+            
+            System.out.println(get_Num_Times());
     }
 }
 

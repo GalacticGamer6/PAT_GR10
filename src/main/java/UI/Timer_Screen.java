@@ -9,22 +9,29 @@ import java.util.Timer;
 
 
 public class Timer_Screen extends javax.swing.JFrame {
+    
     static Timer seconds_timer;
     public static int ms_Passed = 0;
-    public static String latest_Times = Time_Manager.get_Times();
     public static  boolean is_Running = false;
     public static  int MilliSecondsPassed = 0;
     public static  int SecondsPassed = 0;
     public static  int MinutesPassed = 0;
-    public static Timer timer = new Timer();
     public Timer_Screen() {
-        int test = (int)(Math.random()*(22000 - 16000 + 16000));
         int scramble_Number = (int)(Math.random()*(16-1+1));
         initComponents();
-        Time_Manager.add_Time(test);
+        
         Latest_Times_Field.setText(Time_Manager.get_Times());
         
         Scramble_Field.setText(Algorithms.get_Scramble(scramble_Number));
+        
+        
+        
+        
+        
+        
+        
+        
+        
     }
 
     
@@ -193,7 +200,9 @@ public class Timer_Screen extends javax.swing.JFrame {
                     SecondsPassed = 0;
                     MinutesPassed = 0;
                     seconds_timer.cancel();
-                    Time_Manager.add_Time(ms_Passed);
+                    String final_Time = Time_Manager.convert_Time(ms_Passed);
+                    System.out.println(final_Time);
+                    Time_Manager.add_Time(final_Time);
                     Scramble_Field.setText(Algorithms.get_Scramble(scramble_Number));
                     Latest_Times_Field.setText(Time_Manager.get_Times());
                     ms_Passed = 0;
@@ -229,7 +238,7 @@ public class Timer_Screen extends javax.swing.JFrame {
 //        /* Create and display the form */
 //        java.awt.EventQueue.invokeLater(new Runnable() {
 //            public void run() {
-//                new Timer().setVisible(true);
+//                new Timer_Screen().setVisible(true);
 //            }
 //        });
 //    }

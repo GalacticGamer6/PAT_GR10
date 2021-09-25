@@ -16,7 +16,8 @@ import java.util.logging.Logger;
  * @author Neeraavr
  */
 public class Algorithms {
-    private static String file_Path = "data\\normal_Scrambles.txt";
+    private static String file_Path = "data\\scrambles.txt";
+    private static String algorithms_File_Path = "data\\algorithms.txt";
     
     public static String get_Scramble(int scramble_Num){
         String scramble = "";
@@ -30,5 +31,36 @@ public class Algorithms {
             System.out.println("File Not Found");
         }
         return scramble;
-    }            
+    }
+    
+    
+    public static String [] get_LL_Algorithms(String alg_Name){
+        try {
+            Scanner sc = new Scanner(new File(algorithms_File_Path));
+            String line = "";
+            String scramble = "";
+            String solution = "";
+            String [] algorithms = {"",""};
+            
+            while(!line.equalsIgnoreCase(alg_Name)){
+                line = sc.nextLine();
+                }
+            
+                    scramble = sc.nextLine();
+                    solution = sc.nextLine();
+                    sc.close();
+            
+                algorithms[0] = scramble;
+                algorithms[1] = solution;
+                return algorithms;
+            
+        } catch (FileNotFoundException ex) {
+            System.out.println("FILE NOT FOUND");            
+        }
+        return null;
+    }
+    
+    public static void main(String[] args) {
+    }
+            
 }

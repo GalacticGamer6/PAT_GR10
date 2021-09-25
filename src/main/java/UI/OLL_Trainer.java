@@ -13,32 +13,23 @@ import javax.swing.ImageIcon;
  * @author Neeraavr
  */
 public class OLL_Trainer extends javax.swing.JFrame {
+    
     public static String OLL_algs_path = "data\\OLL";
     
-    public void OLL_Buttons(){
-        OLL_AntiSune.setIcon(new ImageIcon("data\\OLL\\AntiSune.png"));
-        OLL_H.setIcon(new ImageIcon("data\\OLL\\H.png"));
-        OLL_L.setIcon(new ImageIcon("data\\OLL\\L.png"));
-        OLL_Pi.setIcon(new ImageIcon("data\\OLL\\Pi.png"));
-        OLL_Sune.setIcon(new ImageIcon("data\\OLL\\Sune.png"));
-        OLL_T.setIcon(new ImageIcon("data\\OLL\\T.png"));
-        OLL_U.setIcon(new ImageIcon("data\\OLL\\U.png"));        
+    private void OLL_Buttons(){
+        OLL_AntiSune.setIcon(new ImageIcon("src\\main\\resources\\LL_Algs\\OLL\\AntiSune.png"));
+        OLL_H.setIcon(new ImageIcon("src\\main\\resources\\LL_Algs\\OLL\\H.png"));
+        OLL_L.setIcon(new ImageIcon("src\\main\\resources\\LL_Algs\\OLL\\L.png"));
+        OLL_Pi.setIcon(new ImageIcon("src\\main\\resources\\LL_Algs\\OLL\\Pi.png"));
+        OLL_Sune.setIcon(new ImageIcon("src\\main\\resources\\LL_Algs\\OLL\\Sune.png"));
+        OLL_T.setIcon(new ImageIcon("src\\main\\resources\\LL_Algs\\OLL\\T.png"));
+        OLL_U.setIcon(new ImageIcon("src\\main\\resources\\LL_Algs\\OLL\\U.png"));        
     }
-    public void PLL_Buttons(){
-//        PLL_UA.setIcon(new ImageIcon("C:\\Users\\neeraavr\\Downloads\\PLL_UA.png"));
-//        PLL_UB.setIcon(new ImageIcon("C:\\Users\\neeraavr\\Downloads\\PLL_UB.png"));
-    }
-    
-//    public static void Chosen_cases(){
-//        if()
-//    }
-    /**
-     * Creates new form Basic_Algorithm_Trainer_Screen
-     */
     public OLL_Trainer() {
         initComponents();
+        
+        
         OLL_Buttons();
-
         
     }
 
@@ -51,13 +42,6 @@ public class OLL_Trainer extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        OLL_AntiSune = new javax.swing.JToggleButton();
-        OLL_H = new javax.swing.JToggleButton();
-        OLL_L = new javax.swing.JToggleButton();
-        OLL_Pi = new javax.swing.JToggleButton();
-        OLL_Sune = new javax.swing.JToggleButton();
-        OLL_T = new javax.swing.JToggleButton();
-        OLL_U = new javax.swing.JToggleButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -67,17 +51,19 @@ public class OLL_Trainer extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         Back_Button = new javax.swing.JButton();
-        Show_Scramble_Check_Box = new javax.swing.JCheckBox();
-        Show_Solution_Check_Box = new javax.swing.JCheckBox();
-        OLL_Output_Field = new javax.swing.JTextField();
+        OLL_Scramble_Field = new javax.swing.JTextField();
+        OLL_AntiSune = new javax.swing.JButton();
+        OLL_Solution_Field = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        OLL_Sune = new javax.swing.JButton();
+        OLL_L = new javax.swing.JButton();
+        OLL_T = new javax.swing.JButton();
+        OLL_H = new javax.swing.JButton();
+        OLL_U = new javax.swing.JButton();
+        OLL_Pi = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-
-        OLL_AntiSune.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                OLL_AntiSuneActionPerformed(evt);
-            }
-        });
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel1.setText("OLL TRAINER");
@@ -103,14 +89,51 @@ public class OLL_Trainer extends javax.swing.JFrame {
             }
         });
 
-        Show_Scramble_Check_Box.setText("Show Scramble");
-        Show_Scramble_Check_Box.addActionListener(new java.awt.event.ActionListener() {
+        OLL_AntiSune.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Show_Scramble_Check_BoxActionPerformed(evt);
+                OLL_AntiSuneActionPerformed(evt);
             }
         });
 
-        Show_Solution_Check_Box.setText("Show Solution");
+        jLabel9.setText("Solution:");
+
+        jLabel10.setText("Scramble:");
+
+        OLL_Sune.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                OLL_SuneActionPerformed(evt);
+            }
+        });
+
+        OLL_L.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                OLL_LActionPerformed(evt);
+            }
+        });
+
+        OLL_T.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                OLL_TActionPerformed(evt);
+            }
+        });
+
+        OLL_H.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                OLL_HActionPerformed(evt);
+            }
+        });
+
+        OLL_U.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                OLL_UActionPerformed(evt);
+            }
+        });
+
+        OLL_Pi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                OLL_PiActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -120,67 +143,54 @@ public class OLL_Trainer extends javax.swing.JFrame {
                 .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel8)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(OLL_Pi, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(OLL_T, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(OLL_AntiSune, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(109, 109, 109)))
+                                        .addGap(6, 6, 6)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(OLL_AntiSune, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(jLabel4)
+                                    .addComponent(OLL_H, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(OLL_Sune, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(OLL_Sune, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(OLL_T, javax.swing.GroupLayout.DEFAULT_SIZE, 197, Short.MAX_VALUE))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(OLL_L, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(OLL_U, javax.swing.GroupLayout.DEFAULT_SIZE, 197, Short.MAX_VALUE))
+                        .addGap(62, 62, 62))
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addComponent(jLabel8)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(OLL_Pi, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(OLL_L, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(OLL_U, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(62, 62, 62))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Show_Solution_Check_Box)
-                                    .addComponent(Show_Scramble_Check_Box))
-                                .addGap(97, 97, 97))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(OLL_H, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Back_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(OLL_Output_Field, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(62, Short.MAX_VALUE))))
+                                    .addComponent(OLL_Solution_Field, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Back_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(OLL_Scramble_Field, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel9)
+                                    .addComponent(jLabel10))))
+                        .addGap(0, 64, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(58, 58, 58)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(OLL_AntiSune, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(OLL_Sune, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addComponent(Show_Scramble_Check_Box)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Show_Solution_Check_Box)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(OLL_L, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(58, 58, 58)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(OLL_L, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(OLL_AntiSune, javax.swing.GroupLayout.DEFAULT_SIZE, 183, Short.MAX_VALUE)
+                    .addComponent(OLL_Sune, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel6)
@@ -188,30 +198,34 @@ public class OLL_Trainer extends javax.swing.JFrame {
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(OLL_T, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(OLL_H, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(OLL_U, javax.swing.GroupLayout.DEFAULT_SIZE, 183, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(OLL_H, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel4))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(OLL_U, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel7)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(OLL_Pi, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(OLL_T, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(OLL_Output_Field, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel4))
                         .addGap(18, 18, 18)
-                        .addComponent(Back_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel8)
-                .addContainerGap(321, Short.MAX_VALUE))
+                        .addComponent(OLL_Pi, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel8)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(217, 217, 217)
+                        .addComponent(jLabel10)
+                        .addGap(7, 7, 7)
+                        .addComponent(OLL_Scramble_Field, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel9)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(OLL_Solution_Field, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(Back_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(29, 29, 29))))
         );
 
         pack();
@@ -221,37 +235,87 @@ public class OLL_Trainer extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_Back_ButtonActionPerformed
 
-    private void Show_Scramble_Check_BoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Show_Scramble_Check_BoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Show_Scramble_Check_BoxActionPerformed
-
     private void OLL_AntiSuneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OLL_AntiSuneActionPerformed
-        if(Show_Scramble_Check_Box.isEnabled() == true){
-            if(OLL_AntiSune.isEnabled()){
-            }
-        }
-        else if(Show_Scramble_Check_Box.isEnabled() == false){
-            OLL_Output_Field.setText(" ");
-        }
+        OLL_Scramble_Field.setText(Algorithms.get_LL_Algorithms("AntiSune")[0]);
+        OLL_Solution_Field.setText(Algorithms.get_LL_Algorithms("AntiSune")[1]);
     }//GEN-LAST:event_OLL_AntiSuneActionPerformed
 
-    public void show_Scramble(){
+    private void OLL_SuneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OLL_SuneActionPerformed
+        OLL_Scramble_Field.setText(Algorithms.get_LL_Algorithms("Sune")[0]);
+        OLL_Solution_Field.setText(Algorithms.get_LL_Algorithms("Sune")[1]);
+    }//GEN-LAST:event_OLL_SuneActionPerformed
 
-    }
+    private void OLL_LActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OLL_LActionPerformed
+        OLL_Scramble_Field.setText(Algorithms.get_LL_Algorithms("L")[0]);
+        OLL_Solution_Field.setText(Algorithms.get_LL_Algorithms("L")[1]);
+    }//GEN-LAST:event_OLL_LActionPerformed
+
+    private void OLL_HActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OLL_HActionPerformed
+        OLL_Scramble_Field.setText(Algorithms.get_LL_Algorithms("H")[0]);
+        OLL_Solution_Field.setText(Algorithms.get_LL_Algorithms("H")[1]);
+    }//GEN-LAST:event_OLL_HActionPerformed
+
+    private void OLL_TActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OLL_TActionPerformed
+        OLL_Scramble_Field.setText(Algorithms.get_LL_Algorithms("T")[0]);
+        OLL_Solution_Field.setText(Algorithms.get_LL_Algorithms("T")[1]);
+    }//GEN-LAST:event_OLL_TActionPerformed
+
+    private void OLL_UActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OLL_UActionPerformed
+        OLL_Scramble_Field.setText(Algorithms.get_LL_Algorithms("U")[0]);
+        OLL_Solution_Field.setText(Algorithms.get_LL_Algorithms("U")[1]);
+    }//GEN-LAST:event_OLL_UActionPerformed
+
+    private void OLL_PiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OLL_PiActionPerformed
+        OLL_Scramble_Field.setText(Algorithms.get_LL_Algorithms("Pi")[0]);
+        OLL_Solution_Field.setText(Algorithms.get_LL_Algorithms("Pis")[1]);
+    }//GEN-LAST:event_OLL_PiActionPerformed
+
+    
+//        public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(Main_Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(Main_Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(Main_Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(Main_Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new OLL_Trainer().setVisible(true);
+//            }
+//        });
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Back_Button;
-    private javax.swing.JToggleButton OLL_AntiSune;
-    private javax.swing.JToggleButton OLL_H;
-    private javax.swing.JToggleButton OLL_L;
-    private javax.swing.JTextField OLL_Output_Field;
-    private javax.swing.JToggleButton OLL_Pi;
-    private javax.swing.JToggleButton OLL_Sune;
-    private javax.swing.JToggleButton OLL_T;
-    private javax.swing.JToggleButton OLL_U;
-    private javax.swing.JCheckBox Show_Scramble_Check_Box;
-    private javax.swing.JCheckBox Show_Solution_Check_Box;
+    private javax.swing.JButton OLL_AntiSune;
+    private javax.swing.JButton OLL_H;
+    private javax.swing.JButton OLL_L;
+    private javax.swing.JButton OLL_Pi;
+    private javax.swing.JTextField OLL_Scramble_Field;
+    private javax.swing.JTextField OLL_Solution_Field;
+    private javax.swing.JButton OLL_Sune;
+    private javax.swing.JButton OLL_T;
+    private javax.swing.JButton OLL_U;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -259,5 +323,6 @@ public class OLL_Trainer extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     // End of variables declaration//GEN-END:variables
 }

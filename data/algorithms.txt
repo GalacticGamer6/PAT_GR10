@@ -1,0 +1,41 @@
+AntiSune
+R U R' U R U2 R'
+R U2 R' U' R U' R'
+
+Sune
+R U2 R' U' R U' R'
+R U R' U R U2 R'
+
+L
+r U R' U' r' F R F'
+F R' F' r U R U' r'
+
+H
+F' U2 F U' L2 F D F L2 U' L2 U L2 D' L2 F2 U' L2
+R U R' U R U' R' U R U2 R'
+
+T
+F D B2 D' F U2 B2 L2 F2 U B2 R2 D' B2 D2
+r U R' U' r' F R F'
+
+U
+U F U' R2 U R2 U F U' F2 U' R2 U2 F2 U' B2 D' F2 D B2 R2
+R2 D R' U2 R D' R' U2 R'
+
+Pi
+U' B U2 B2 R2 B' R2 U2 B U B2 U B2 U' B2 R2 B2 R2
+R U2 R2 U' R2 U' R2 U2 R
+
+UA
+R2 U R U R' U' R' U' R' U' R'
+R U' R U R U R U' R' U' R2
+
+UB
+R U' R U R U R U' R' U' R2
+R2 U R U R' U' R' U' R' U R'
+
+Corner_Adjustment
+R' F R' B2 R F' R' B2 R2 U'
+
+
+

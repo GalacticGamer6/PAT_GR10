@@ -79,13 +79,21 @@ public class goal_Manager {
 
         try {
             sc = new Scanner(new File(completed_Goals_File_Path));
-
+            
+             if(!sc.hasNextLine()){
+                return null;
+            }
+             else{
+                 
+             
             while (sc.hasNextLine()) {
                 output = sc.nextLine();
                 completed_Goals[i] = output;
                 i++;
-
+                
             }
+             }
+            
         } catch (FileNotFoundException ex) {
             System.out.println("File Not Found!");
         }

@@ -60,7 +60,5 @@ public class Algorithms {
         return null;
     }
     
-    public static void main(String[] args) {
-    }
-            
+           
 }

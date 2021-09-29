@@ -71,29 +71,21 @@ public class goal_Manager {
     public static String[] get_Completed_Goals() {
 
         int i = 0;
-        int length = get_Num_Goals();
-
+        int length = get_Num_Completed_Goals();
         String output = "";
         String[] completed_Goals = new String[length];
         Scanner sc;
 
         try {
             sc = new Scanner(new File(completed_Goals_File_Path));
-            
-             if(!sc.hasNextLine()){
-                return null;
-            }
-             else{
-                 
-             
+                    
             while (sc.hasNextLine()) {
                 output = sc.nextLine();
                 completed_Goals[i] = output;
                 i++;
-                
             }
-             }
-            
+             
+            return completed_Goals;
         } catch (FileNotFoundException ex) {
             System.out.println("File Not Found!");
         }
@@ -101,36 +93,31 @@ public class goal_Manager {
         return completed_Goals;
     }
 
-    public static void complete_Goal(String goal_Name) {
-        String line = "";
-        String output = "";
-        try {
-            Scanner sc = new Scanner(new File(goals_File_Path));
-            while (sc.hasNextLine()) {
-                line = sc.nextLine();
+	public static void complete_Goal(String selected_Goal) {
+		try {
+			Scanner sc = new Scanner(new File(goals_File_Path));
+			String output = "";
+			String current_Goal = "";
 
-                Scanner line_Sc = new Scanner(line);
-                String goal = line_Sc.nextLine();
-                line_Sc.close();
+			while (sc.hasNextLine()) {
+				current_Goal = sc.nextLine();
+				if (!current_Goal.equalsIgnoreCase(selected_Goal)) {
+					output += current_Goal + "\n";
+				}
+			}
+			sc.close();
 
-                if (!goal.equalsIgnoreCase(goal_Name)) {
-
-                    output += line + "\n";
-                }
-
-                PrintWriter pw = null;
-                try {
-                    pw = new PrintWriter(new FileWriter(goals_File_Path, false));
-                } catch (IOException ex) {
-                    Logger.getLogger(goal_Manager.class.getName()).log(Level.SEVERE, null, ex);
-                }
-                pw.print(output);
-                pw.close();
-
-            }
-        } catch (FileNotFoundException ex) {
-            System.out.println("FIle Not Found!");
-        }
-    }
-
+			PrintWriter pw = new PrintWriter(new FileWriter(goals_File_Path, false));
+			pw.print(output);
+			pw.close();
+                                                PrintWriter pw2 = new PrintWriter(new FileWriter(completed_Goals_File_Path,true));
+                                                pw2.print(selected_Goal + "\n") ;
+                                                pw2.close();
+		} catch (FileNotFoundException ex) {
+			System.out.println("Students file not found");
+		} catch (IOException ex) {
+			System.out.println("Could not delete student");
+		}
+	}
+        
 }

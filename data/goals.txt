@@ -1,0 +1,10 @@
+Solve The White Cross
+Solve the First Layer
+Solve the Second Layer
+Solve the Yellow Cross
+Solve the Yellow Face
+Create a pair of Headlights
+Permutate the Last Layer
+Achieve a Solve in under 1:15:00
+Achive a solve in under 1:00:00
+Start practising Look Ahead!

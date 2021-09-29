@@ -89,6 +89,7 @@ public class OLL_Trainer extends javax.swing.JFrame {
             }
         });
 
+        OLL_AntiSune.setFocusable(false);
         OLL_AntiSune.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 OLL_AntiSuneActionPerformed(evt);
@@ -267,7 +268,7 @@ public class OLL_Trainer extends javax.swing.JFrame {
 
     private void OLL_PiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OLL_PiActionPerformed
         OLL_Scramble_Field.setText(Algorithms.get_LL_Algorithms("Pi")[0]);
-        OLL_Solution_Field.setText(Algorithms.get_LL_Algorithms("Pis")[1]);
+        OLL_Solution_Field.setText(Algorithms.get_LL_Algorithms("Pi")[1]);
     }//GEN-LAST:event_OLL_PiActionPerformed
 
     

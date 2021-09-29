@@ -89,9 +89,9 @@ public class Time_Manager {
         
               
                 
-        public static void main(String[] args) {
-            
-            System.out.println(get_Num_Times());
-    }
+//        public static void main(String[] args) {
+//            
+//            System.out.println(get_Num_Times());
+//    }
 }
 

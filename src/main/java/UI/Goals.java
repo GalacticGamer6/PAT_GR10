@@ -17,6 +17,7 @@
 package UI;
 import Backend.goal_Manager;
 import javax.swing.DefaultListModel;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.ListModel;
 
@@ -33,26 +34,10 @@ public class Goals extends javax.swing.JFrame {
         
         initComponents();
         
-        DefaultListModel goals_Lm = new DefaultListModel();
-        String [] goals = goal_Manager.get_Goals();
-        ;
-        for(int i = 0; i < goals.length ;i++){
-            goals_Lm.addElement(goals[i]);
-        }
-        goals_List.setModel(goals_Lm);
+
+        goals_List.setModel(update_Goals_Lm());
         
-        DefaultListModel completed_Goals_Lm = new DefaultListModel();
-        String [] completed_Goals = goal_Manager.get_Completed_Goals();
-        
-        if(completed_Goals.length > 0){
-        for(int i = 0;i < completed_Goals.length; i++){
-            completed_Goals_Lm.addElement(completed_Goals[i]);
-        }
-        completed_List.setModel(completed_Goals_Lm);
-        }
-        else{
-            
-        }
+        completed_List.setModel(update_Completed_Goals_Lm());
 
     }
     
@@ -169,44 +154,76 @@ public class Goals extends javax.swing.JFrame {
     }//GEN-LAST:event_Back_buttonActionPerformed
 
     private void to_Completed_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_to_Completed_ButtonActionPerformed
-        String name = goals_List.getSelectedValue();
-        goal_Manager.complete_Goal(name);
+        String selected_Goal = goals_List.getSelectedValue();
+        ImageIcon goal_Icon = new ImageIcon("goals_image_Icon.png");
+        int ans = JOptionPane.showConfirmDialog(rootPane, "Are you sure you've completed this goal?", "Confirmation", WIDTH, HEIGHT,goal_Icon);
+       
+       switch(ans){
+           case 0 : 
+                       JOptionPane.showMessageDialog(rootPane, "Goal Successfully Completed!");
+                       goal_Manager.complete_Goal(selected_Goal);
+                       goals_List.setModel(update_Goals_Lm());
+                       completed_List.setModel(update_Completed_Goals_Lm());
+                       break;
+           case 1:
+                       JOptionPane.showMessageDialog(rootPane, "Dont Give Up!");
+                       break;               
+       }
     }//GEN-LAST:event_to_Completed_ButtonActionPerformed
-
+    
+        public static ListModel update_Goals_Lm(){
+                DefaultListModel goals_Lm = new DefaultListModel();
+                String [] goals = goal_Manager.get_Goals();
+                for(int i = 0; i < goals.length ;i++){
+                    goals_Lm.addElement(goals[i]);
+                }
+                return goals_Lm;
+        }
+        
+        public static ListModel update_Completed_Goals_Lm(){
+                DefaultListModel completed_Goals_Lm = new DefaultListModel();
+                String [] completed_Goals = goal_Manager.get_Completed_Goals();
+                for(int i = 0; i < completed_Goals.length ;i++){
+                    completed_Goals_Lm.addElement(completed_Goals[i]);
+                }
+                return completed_Goals_Lm;
+        }        
+    
+    
     /**
      * @param args the command line arguments
      */
-//    public static void main(String args[]) {
-//        /* Set the Nimbus look and feel */
-//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-//         */
-//        try {
-//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-//                if ("Nimbus".equals(info.getName())) {
-//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-//                    break;
-//                }
-//            }
-//        } catch (ClassNotFoundException ex) {
-//            java.util.logging.Logger.getLogger(Main_Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (InstantiationException ex) {
-//            java.util.logging.Logger.getLogger(Main_Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (IllegalAccessException ex) {
-//            java.util.logging.Logger.getLogger(Main_Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-//            java.util.logging.Logger.getLogger(Main_Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        }
-//        //</editor-fold>
-//
-//        /* Create and display the form */
-//        java.awt.EventQueue.invokeLater(new Runnable() {
-//            public void run() {
-//                new Goals().setVisible(true);
-//            }
-//        });
-//    }
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Main_Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Main_Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Main_Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Main_Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Goals().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Back_button;

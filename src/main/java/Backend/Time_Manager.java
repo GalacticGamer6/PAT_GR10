@@ -73,7 +73,7 @@ public class Time_Manager {
 		}
 	}
         
-                public static String convert_Time(int milliseconds){
+                public static String convert_To_Stopwatch(int milliseconds){
                 int arr_Length = get_Num_Times();
                 int minutes = (milliseconds/1000)/60;
                 int mins_to_Remove = minutes * 60000;
@@ -86,12 +86,56 @@ public class Time_Manager {
 
                 return output;
                 }
-        
+                
+                public static int convert_To_Ms(String stopwatch_Time){
+                    Scanner sc = new Scanner(stopwatch_Time).useDelimiter(":");
+                    int minutes_to_ms = Integer.parseInt(sc.next()) * 60000;
+                    int seconds_to_ms = Integer.parseInt(sc.next()) * 1000;
+                    int ms = Integer.parseInt(sc.next());
+                    
+                    int total_ms = minutes_to_ms  + seconds_to_ms + ms;
+                    return total_ms;
+                }
+                
+                    //num solves is the number of solves we want to take into consideration whilst calculating an average
+                public static String get_average_of(int num_Solves){
+                try {   
+                        if(get_Num_Times() == 0){
+                            return "0";
+                        }
+                        
+                        int time = 0;
+                        int total_Time_Ms = 0;
+                        int avg_Time_ms = 0;
+                        String avg_Time_String = "";
+                        int travel = get_Num_Times() - num_Solves;
+                        Scanner sc = new Scanner(new File(file_Path));
+                        for(int i = 0 ; i < travel-1 ; i++){
+                            sc.nextLine();
+                        }
+                        while(sc.hasNextLine()){
+                            time = convert_To_Ms(sc.nextLine());
+                            total_Time_Ms+= time; 
+                            time = 0;
+                        }
+                        
+                        avg_Time_ms = total_Time_Ms / num_Solves;
+                        System.out.println(avg_Time_ms);
+                        avg_Time_String = convert_To_Stopwatch(avg_Time_ms);
+                        
+                        return avg_Time_String;
+        } catch (FileNotFoundException ex) {
+                    System.out.println("FILE NOT FOUND");
+        }
+                return null;
+                }
+                
+                
               
                 
-//        public static void main(String[] args) {
-//            
-//            System.out.println(get_Num_Times());
-//    }
+        public static void main(String[] args) {
+            String time = get_average_of(3);
+            System.out.println(time);
+    }
 }
 

@@ -5,6 +5,8 @@
  */
 package UI;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author Neeraavr
@@ -16,6 +18,9 @@ public class Main_Menu extends javax.swing.JFrame {
      */
     public Main_Menu() {
         initComponents();
+        
+         ImageIcon main = new ImageIcon("main_Icon.png");
+        this.setIconImage(main.getImage());
     }
 
     /**
@@ -34,6 +39,7 @@ public class Main_Menu extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("MENU");
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

@@ -1,4 +1,3 @@
-
 package UI;
 
 import Backend.Algorithms;
@@ -9,14 +8,15 @@ import java.util.Timer;
 
 
 public class Timer_Screen extends javax.swing.JFrame {
+    
+    Time_Manager tm = new Time_Manager();
     public static int count = 0;
-    static Timer seconds_timer;
+    static Timer timer;
     public static int ms_Passed = 0;
     public static  boolean is_Running = false;
-    public static  int MilliSecondsPassed = 0;
-    public static  int SecondsPassed = 0;
-    public static  int MinutesPassed = 0;
+    
     public Timer_Screen() {
+        
         int scramble_Number = (int)(Math.random()*(16-1+1));
         
         initComponents();
@@ -29,7 +29,7 @@ public class Timer_Screen extends javax.swing.JFrame {
         
         Scramble_Field.setText(Algorithms.get_Scramble(scramble_Number));
         
-        
+        Solve_Time_Field.setText("0 : 00 : 000");
         
         
         
@@ -52,15 +52,17 @@ public class Timer_Screen extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         Scramble_Field = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        back_Button = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         average_Text_Field = new javax.swing.JTextField();
         Ao5_Text_Field = new javax.swing.JTextField();
         Ao12_Text_Field = new javax.swing.JTextField();
+        clear_Button = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Timer");
         addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 formKeyPressed(evt);
@@ -88,11 +90,11 @@ public class Timer_Screen extends javax.swing.JFrame {
 
         jLabel4.setText("Scramble:");
 
-        jButton1.setText("BACK");
-        jButton1.setFocusable(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        back_Button.setText("BACK");
+        back_Button.setFocusable(false);
+        back_Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                back_ButtonActionPerformed(evt);
             }
         });
 
@@ -107,6 +109,14 @@ public class Timer_Screen extends javax.swing.JFrame {
         Ao5_Text_Field.setFocusable(false);
 
         Ao12_Text_Field.setFocusable(false);
+
+        clear_Button.setText("CLEAR");
+        clear_Button.setFocusable(false);
+        clear_Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clear_ButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -138,7 +148,7 @@ public class Timer_Screen extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton1)
+                            .addComponent(back_Button)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel5)
                                 .addGap(31, 31, 31)
@@ -151,7 +161,8 @@ public class Timer_Screen extends javax.swing.JFrame {
                                 .addComponent(jLabel1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(average_Text_Field, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(clear_Button)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -185,44 +196,33 @@ public class Timer_Screen extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(back_Button)
+                    .addComponent(clear_Button))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void back_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back_ButtonActionPerformed
         this.dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_back_ButtonActionPerformed
 
     private void formKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyReleased
         if (!is_Running ) {
             is_Running = true;
             if (evt.getKeyCode() == evt.VK_SPACE) {
 
-                seconds_timer = new Timer();
+                timer = new Timer();
                 TimerTask task = new TimerTask() {
                     @Override
                     public void run() {
                         ms_Passed++;
-                        MilliSecondsPassed++;
-                        Solve_Time_Field.setText(MinutesPassed + ":" + SecondsPassed + ":" + MilliSecondsPassed);
-                        if (MilliSecondsPassed == 1000) {
-                            MilliSecondsPassed = 0;
-                            SecondsPassed++;
-                        }
-
-                        if (SecondsPassed == 60) {
-                            MilliSecondsPassed = 0;
-                            SecondsPassed = 0;
-                            MinutesPassed++;
-//                System.out.println(MinutesPassed + ":" + SecondsPassed + ":" + MilliSecondsPassed);
-                        }
-
+                        Solve_Time_Field.setText(tm.convert_To_Stopwatch(ms_Passed));
                     }
                 };
-                seconds_timer.scheduleAtFixedRate(task, 0, 1);
+                timer.scheduleAtFixedRate(task, 0, 1);
 
             }
 
@@ -233,72 +233,47 @@ public class Timer_Screen extends javax.swing.JFrame {
     }//GEN-LAST:event_formKeyReleased
 
     private void formKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyPressed
-        count++;
-        int scramble_Number = (int)(Math.random()*(16-1+1));
+
         if (is_Running) {
-            
-            if (MilliSecondsPassed > 0 | SecondsPassed > 0 | MinutesPassed > 0) {
+            if (ms_Passed > 0) {
+                //code ot actually stop the timer and add time
                 if (evt.getKeyCode() == evt.VK_SPACE) {
-                    MilliSecondsPassed = 0;
-                    SecondsPassed = 0;
-                    MinutesPassed = 0;
-                    seconds_timer.cancel();
-                    String final_Time = Time_Manager.convert_To_Stopwatch(ms_Passed);
-                    System.out.println(final_Time);
-                    Time_Manager.add_Time(final_Time);
-                    Scramble_Field.setText(Algorithms.get_Scramble(scramble_Number));
-                    Latest_Times_Field.setText(Time_Manager.get_Times());
-                    ms_Passed = 0;
-                    average_Text_Field.setText(Time_Manager.get_average_of(Time_Manager.get_Num_Times()));
+                    timer.cancel();
+                    tm.add_Time(tm.convert_To_Stopwatch(ms_Passed));
+                    count++;
+                    System.out.println(count);
                     
-                    if(count % 5 == 0){
-                    Ao5_Text_Field.setText(Time_Manager.get_average_of(5));
-                    }
-                    else{
-                        
-                    }
-                    if(count%12 == 0){
-                    Ao12_Text_Field.setText(Time_Manager.get_average_of(12));
-                    }
-                    else{
-                        
+                    //Just doing some visual updates
+                    int scramble_Num = (int)(Math.random()*(16-1+1));
+                    Scramble_Field.setText(Algorithms.get_Scramble(scramble_Num));
+                    Latest_Times_Field.setText(Time_Manager.get_Times());
+                    average_Text_Field.setText(tm.get_average_of(tm.get_Num_Times()));
+                 
+                    
+                    //initializing ms passed
+                    ms_Passed = 0;
+                    
+                    //just setting some averages
+                    if(count >= 5){
+                        Ao5_Text_Field.setText(tm.get_average_of(5));
+                        if(count>=12){
+                            Ao12_Text_Field.setText(tm.get_average_of(12));
+                        }
                     }
                 }
             }
         }
     }//GEN-LAST:event_formKeyPressed
+
+    private void clear_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clear_ButtonActionPerformed
+        Time_Manager.clear_Times();
+        Latest_Times_Field.setText(Time_Manager.get_Times());
+                    average_Text_Field.setText("0:00:000");
+                    Ao5_Text_Field.setText("0:00:000");
+                    Ao12_Text_Field.setText("0:00:000");                     
+        Solve_Time_Field.setText("0:00:000");
+    }//GEN-LAST:event_clear_ButtonActionPerformed
     
-//    public static void main(String args[]) {
-//        /* Set the Nimbus look and feel */
-//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-//         */
-//        try {
-//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-//                if ("Nimbus".equals(info.getName())) {
-//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-//                    break;
-//                }
-//            }
-//        } catch (ClassNotFoundException ex) {
-//            java.util.logging.Logger.getLogger(Main_Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (InstantiationException ex) {
-//            java.util.logging.Logger.getLogger(Main_Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (IllegalAccessException ex) {
-//            java.util.logging.Logger.getLogger(Main_Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-//            java.util.logging.Logger.getLogger(Main_Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        }
-//        //</editor-fold>
-//
-//        /* Create and display the form */
-//        java.awt.EventQueue.invokeLater(new Runnable() {
-//            public void run() {
-//                new Timer_Screen().setVisible(true);
-//            }
-//        });
-//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Ao12_Text_Field;
@@ -307,7 +282,8 @@ public class Timer_Screen extends javax.swing.JFrame {
     private javax.swing.JTextField Scramble_Field;
     private javax.swing.JTextField Solve_Time_Field;
     private javax.swing.JTextField average_Text_Field;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton back_Button;
+    private javax.swing.JButton clear_Button;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

@@ -16,6 +16,7 @@
  */
 package UI;
 import Backend.goal_Manager;
+import java.awt.Image;
 import javax.swing.DefaultListModel;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
@@ -33,7 +34,6 @@ public class Goals extends javax.swing.JFrame {
     public Goals() {
         
         initComponents();
-        
 
         goals_List.setModel(update_Goals_Lm());
         

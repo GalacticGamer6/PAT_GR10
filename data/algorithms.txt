@@ -34,8 +34,17 @@ UB
 R U' R U R U R U' R' U' R2
 R2 U R U R' U' R' U' R' U R'
 
-Corner_Adjustment
-R' F R' B2 R F' R' B2 R2 U'
+T_Perm
+R U R' U' R' F R2 U' R' U' R U R' F'
+R U R' U' R' F R2 U' R' U' R U R' F'
+
+RA
+R U' R' U' R U R D R' U' R D' R' U2 R'
+R U' R' U' R U R D R' U' R D' R' U2 R'
+
+Y
+F R U' R' U' R U R' F' R U R' U' R' F R F'
+F R U' R' U' R U R' F' R U R' U' R' F R F'
 
 
 

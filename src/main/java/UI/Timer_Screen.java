@@ -4,6 +4,7 @@ import Backend.Algorithms;
 import Backend.Time_Manager;
 import java.util.TimerTask;
 import java.util.Timer;
+import javax.swing.ImageIcon;
 
 
 
@@ -32,7 +33,8 @@ public class Timer_Screen extends javax.swing.JFrame {
         Solve_Time_Field.setText("0 : 00 : 000");
         
         
-        
+        ImageIcon main = new ImageIcon("src/main/resources/UI_Images/main_Icon.png");
+        this.setIconImage(main.getImage());
         
         
         
@@ -207,6 +209,8 @@ public class Timer_Screen extends javax.swing.JFrame {
 
     private void back_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back_ButtonActionPerformed
         this.dispose();
+        Main_Menu mm = new Main_Menu();
+        mm.setVisible(true);
     }//GEN-LAST:event_back_ButtonActionPerformed
 
     private void formKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyReleased
@@ -272,6 +276,7 @@ public class Timer_Screen extends javax.swing.JFrame {
                     Ao5_Text_Field.setText("0:00:000");
                     Ao12_Text_Field.setText("0:00:000");                     
         Solve_Time_Field.setText("0:00:000");
+        count = 0; // making sure to only calculate averages once we are back to 5 / 12 solves
     }//GEN-LAST:event_clear_ButtonActionPerformed
     
 

@@ -8,6 +8,8 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import javax.swing.*;
 
 public class goal_Manager {
 
@@ -41,8 +43,8 @@ public class goal_Manager {
             System.out.println("FILE NOT FOUND");
         }
         return count;
-    }
-
+    }            
+            
     public static String[] get_Goals() {
 
         int i = 0;

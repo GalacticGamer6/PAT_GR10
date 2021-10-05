@@ -1,3 +1,4 @@
+New
 Solve The White Cross
 Solve the First Layer
 Solve the Second Layer
@@ -5,6 +6,42 @@ Solve the Yellow Cross
 Solve the Yellow Face
 Create a pair of Headlights
 Permutate the Last Layer
-Achieve a Solve in under 1:15:00
-Achive a solve in under 1:00:00
-Start practising Look Ahead!
+
+--------------------------------------------
+
+Sub 1:30:000
+Solve the cube 30-40 times
+Start practising finger tricks
+Get comfortable with your less dominant hand
+
+--------------------------------------------
+
+Sub 1:00:000
+Keep with the beginner method
+Start thinking about your cross and better ways to align it
+Start solving the cube with the white face on the bottom
+Start inserting white edges with different algorithms instead of R U R' U'
+Learn to execute the sexy-move algorithm faster
+
+--------------------------------------------
+
+Sub 0:40:000
+Learn 2 look oll(oll Trainer)
+Start learning intuituve F2L
+Start Learning how to Look ahead in inspection time
+Learn more advanced finger tricks
+Solve the cube strictly with these conditions about 15-20 times a day
+
+--------------------------------------------
+
+Sub 0:20:000
+Solve every cross in 8 moves or less
+Have fewer cube rotations
+Cut down on your re-grips
+Start Using muscle memory to solve f2l as opposed to intuitively
+Try to get your 2 look oll in under 4 seconds
+Learn full Pll (except for G perms)
+ 
+
+
+

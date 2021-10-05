@@ -31,6 +31,9 @@ public class OLL_Trainer extends javax.swing.JFrame {
         
         OLL_Buttons();
         
+        ImageIcon main = new ImageIcon("src/main/resources/UI_Images/main_Icon.png");
+        this.setIconImage(main.getImage());        
+        
     }
 
     /**
@@ -64,6 +67,7 @@ public class OLL_Trainer extends javax.swing.JFrame {
         OLL_Pi = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("OLL");
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel1.setText("OLL TRAINER");
@@ -234,6 +238,8 @@ public class OLL_Trainer extends javax.swing.JFrame {
 
     private void Back_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Back_ButtonActionPerformed
         this.dispose();
+        Main_Menu mm = new Main_Menu();
+        mm.setVisible(true);        
     }//GEN-LAST:event_Back_ButtonActionPerformed
 
     private void OLL_AntiSuneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OLL_AntiSuneActionPerformed

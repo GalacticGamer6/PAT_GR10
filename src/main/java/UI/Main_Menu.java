@@ -19,7 +19,7 @@ public class Main_Menu extends javax.swing.JFrame {
     public Main_Menu() {
         initComponents();
         
-         ImageIcon main = new ImageIcon("main_Icon.png");
+        ImageIcon main = new ImageIcon("src/main/resources/UI_Images/main_Icon.png");
         this.setIconImage(main.getImage());
     }
 
@@ -39,7 +39,7 @@ public class Main_Menu extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("MENU");
+        setTitle("Menu");
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -113,21 +113,25 @@ public class Main_Menu extends javax.swing.JFrame {
     private void Timer_Screen_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Timer_Screen_ButtonActionPerformed
         Timer_Screen timer = new Timer_Screen();
         timer.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_Timer_Screen_ButtonActionPerformed
 
     private void Challenges_Screen_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Challenges_Screen_ButtonActionPerformed
         Goals g = new Goals();
         g.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_Challenges_Screen_ButtonActionPerformed
 
     private void OLL_Trainer_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OLL_Trainer_ButtonActionPerformed
         OLL_Trainer o = new OLL_Trainer();
         o.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_OLL_Trainer_ButtonActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         PLL_Trainer p = new PLL_Trainer();
         p.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**

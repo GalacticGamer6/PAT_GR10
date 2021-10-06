@@ -35,7 +35,7 @@ public class Timer_Screen extends javax.swing.JFrame {
         
         ImageIcon main = new ImageIcon("src/main/resources/UI_Images/main_Icon.png");
         this.setIconImage(main.getImage());
-        
+        setLocationRelativeTo(null);
         
         
         
@@ -65,6 +65,7 @@ public class Timer_Screen extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Timer");
+        setResizable(false);
         addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 formKeyPressed(evt);

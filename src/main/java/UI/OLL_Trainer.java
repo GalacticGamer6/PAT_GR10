@@ -33,7 +33,7 @@ public class OLL_Trainer extends javax.swing.JFrame {
         
         ImageIcon main = new ImageIcon("src/main/resources/UI_Images/main_Icon.png");
         this.setIconImage(main.getImage());        
-        
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -68,6 +68,7 @@ public class OLL_Trainer extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("OLL");
+        setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel1.setText("OLL TRAINER");

@@ -1,10 +1,8 @@
 New
-Solve The White Cross
 Solve the First Layer
 Solve the Second Layer
 Solve the Yellow Cross
 Solve the Yellow Face
-Create a pair of Headlights
 Permutate the Last Layer
 
 --------------------------------------------
@@ -18,7 +16,6 @@ Get comfortable with your less dominant hand
 
 Sub 1:00:000
 Keep with the beginner method
-Start thinking about your cross and better ways to align it
 Start solving the cube with the white face on the bottom
 Start inserting white edges with different algorithms instead of R U R' U'
 Learn to execute the sexy-move algorithm faster

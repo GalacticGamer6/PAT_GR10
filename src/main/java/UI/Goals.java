@@ -43,6 +43,7 @@ public class Goals extends javax.swing.JFrame {
         
         completed_List.setModel(update_Completed_Goals_Lm());
          Goals_Label.setIcon(new ImageIcon("src/main/resources/UI_Images/goals_image_Icon.png"));
+         setLocationRelativeTo(null);
     }
     
     
@@ -72,6 +73,7 @@ public class Goals extends javax.swing.JFrame {
         setTitle("Goals");
         setAutoRequestFocus(false);
         setFont(new java.awt.Font("Copperplate Gothic Bold", 0, 10)); // NOI18N
+        setResizable(false);
 
         Goals_Label.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
 

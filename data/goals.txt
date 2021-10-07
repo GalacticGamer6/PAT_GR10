@@ -1,8 +1,10 @@
 New
+Solve The White Cross
 Solve the First Layer
 Solve the Second Layer
 Solve the Yellow Cross
 Solve the Yellow Face
+Create a pair of Headlights
 Permutate the Last Layer
 
 --------------------------------------------
@@ -26,6 +28,7 @@ Sub 0:40:000
 Learn 2 look oll(oll Trainer)
 Start learning intuituve F2L
 Start Learning how to Look ahead in inspection time
+Start thinking about your cross and better ways to align it
 Learn more advanced finger tricks
 Solve the cube strictly with these conditions about 15-20 times a day
 

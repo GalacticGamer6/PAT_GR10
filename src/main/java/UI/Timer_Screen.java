@@ -2,8 +2,13 @@ package UI;
 
 import Backend.Algorithms;
 import Backend.Time_Manager;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 import java.util.TimerTask;
 import java.util.Timer;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 
 
@@ -259,17 +264,32 @@ public class Timer_Screen extends javax.swing.JFrame {
                     ms_Passed = 0;
                     
                     //just setting some averages
+                    
+                    
+                    if(allow_Average_Calculation() == false){
                     if(count >= 5){
                         Ao5_Text_Field.setText(tm.get_average_of(5));
                         if(count>=12){
                             Ao12_Text_Field.setText(tm.get_average_of(12));
                         }
                     }
+                   }
+                    else{
+                    if(count >= 5){
+                        Ao5_Text_Field.setText(tm.get_average_of(5));
+                        if(count>=12){
+                            Ao12_Text_Field.setText(tm.get_average_of(12));
+                        }
+                    }                        
+                    }
                 }
             }
         }
     }//GEN-LAST:event_formKeyPressed
 
+    
+    
+        
     private void clear_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clear_ButtonActionPerformed
         Time_Manager.clear_Times();
         Latest_Times_Field.setText(Time_Manager.get_Times());
@@ -279,6 +299,32 @@ public class Timer_Screen extends javax.swing.JFrame {
         Solve_Time_Field.setText("0:00:000");
         count = 0; // making sure to only calculate averages once we are back to 5 / 12 solves
     }//GEN-LAST:event_clear_ButtonActionPerformed
+    
+    public static boolean allow_Average_Calculation(){
+        Scanner sc;
+        try {
+            sc = new Scanner(new File("data//tracker"));
+             if(sc.nextLine().equals("count12_achieved")){
+                 return true;
+             }
+             else{
+                 return false;
+             }
+             
+        } catch (FileNotFoundException ex) {
+            System.out.println("NOT FOUND");
+        }
+       return false;
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

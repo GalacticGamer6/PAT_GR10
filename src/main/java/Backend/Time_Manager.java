@@ -119,23 +119,24 @@ public class Time_Manager {
                     int avg_Time_ms = 0;
                     String avg_Time_String = "";
                     
-                try {   
+                    
+                try {  
                         if(get_Num_Times() == 0){
                             return "0 : 00 : 000";
-                        }
+                        }                        
                         
                         //cakcukating the disatacne foe the scanner to find the latest solves to be used in avg    
                         int travel = get_Num_Times() - num_Solves;
-                        Scanner sc = new Scanner(new File(file_Path));
+                        Scanner sc2 = new Scanner(new File(file_Path));
                         
                         //travelling to the times
                         for(int i = 0 ; i < travel ; i++){
-                            sc.nextLine();
+                            sc2.nextLine();
                         }
                         
                         //converting the remainder lines into ms and adding into total_Time_Ms
-                        while(sc.hasNextLine()){
-                            String temp = sc.nextLine();
+                        while(sc2.hasNextLine()){
+                            String temp = sc2.nextLine();
                             time = convert_To_Ms(temp);
                             total_Time_Ms+= time; 
                             time = 0; // re initializing time
@@ -166,10 +167,10 @@ public class Time_Manager {
                 }
         }       
               
-        public static void main(String[] args) {
-            String idk = get_average_of(12);
-            System.out.println(idk);
-    }
+//        public static void main(String[] args) {
+//            String idk = get_average_of(12);
+//            System.out.println(idk);
+//    }
         
 }
 

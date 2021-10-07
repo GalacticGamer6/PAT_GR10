@@ -25,7 +25,7 @@ public class Time_Manager {
     //a path to the solve times txt file
     private static String file_Path = "data\\solve_Times.txt";
     
-   
+               
         public static int get_Num_Times(){  //legit just reads the amount of lines in the solve_Times text files and returns it
         //still no cool conventions yet :' (    
         int count = 0;

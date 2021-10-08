@@ -71,10 +71,10 @@ public class Time_Manager {
 	}        
         
         
-	public static void add_Time(String Milliseconds) {
+	public static void add_Time(String stopwatch_time) {
 		try {
 			PrintWriter pw = new PrintWriter(new FileWriter(file_Path, true));
-			pw.println(Milliseconds);
+			pw.println(stopwatch_time);
 			pw.close();
 		} catch (IOException ex) {
 			System.out.println("Could not write to file");

@@ -16,7 +16,7 @@ public class goal_Manager {
     private static String goals_File_Path = "data\\goals.txt";
     private static String completed_Goals_File_Path = "data\\completed_Goals.txt";
 
-    public static int get_Num_Goals() {
+    private static int get_Num_Goals() { //only used within class
         int count = 0;
         try {
             Scanner sc = new Scanner(new File(goals_File_Path));
@@ -30,7 +30,7 @@ public class goal_Manager {
         return count;
     }
 
-    public static int get_Num_Completed_Goals() {
+    private static int get_Num_Completed_Goals() {// only used within Class
 
         int count = 0;
         try {
